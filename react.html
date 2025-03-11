@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li><a href="#news">Táblázat</a></li>
+        <li><a href="#contact">HTML5</a></li>
+        <li><a href="chartjs.html">ChartJS</a></li>
+        <li><a href="#about">AJAX</a></li>
+        <li><a class="active" href="react.html">React</a></li>      
+    </ul>
+
+    <div class="calculator">
+        <div class="screen" id="screen"></div>
+        <div class="buttons">
+          <button onclick="appendToScreen('1')">1</button>
+          <button onclick="appendToScreen('2')">2</button>
+          <button onclick="appendToScreen('3')">3</button>
+          <button onclick="appendToScreen('+')">+</button>
+    
+          <button onclick="appendToScreen('4')">4</button>
+          <button onclick="appendToScreen('5')">5</button>
+          <button onclick="appendToScreen('6')">6</button>
+          <button onclick="appendToScreen('-')">-</button>
+    
+          <button onclick="appendToScreen('7')">7</button>
+          <button onclick="appendToScreen('8')">8</button>
+          <button onclick="appendToScreen('9')">9</button>
+          <button onclick="appendToScreen('*')">*</button>
+    
+          <button onclick="appendToScreen('0')">0</button>
+          <button onclick="clearScreen()">C</button>
+          <button onclick="backspace()">←</button>
+          <button onclick="appendToScreen('/')">/</button>
+    
+          <button onclick="calculateResult()" colspan="4" style="grid-column: span 4;">=</button>
+        </div>
+      </div>
+      <script src="script2.js"></script>
+    <footer>
+        <p>Elkészítők:</p>
+        <p>Baczúr Martin - Neptun: YLZZ7U, Kullai Marcell - Neptun: FSA7X7</p>
+    </footer>
+</body>
+</html>
