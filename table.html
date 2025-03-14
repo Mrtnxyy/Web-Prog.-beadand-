@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li><a class="active" href="table.html">Táblázat</a></li>
+        <li><a href="html5.html">HTML5</a></li>
+        <li><a href="chartjs.html">ChartJS</a></li>
+        <li><a href="#about">AJAX</a></li>
+        <li><a href="oojs.html">OOJS</a></li>
+        <li><a href="react.html">React</a></li>
+    </ul>
+
+    <h2>CRUD Táblázat</h2>
+
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Keresés...">
+
+    <table id="crudTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">ID</th>
+                <th onclick="sortTable(1)">Név</th>
+                <th onclick="sortTable(2)">Kategória</th>
+                <th onclick="sortTable(3)">Akciók</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Termék 1</td>
+                <td>Elektronika</td>
+                <td>
+                    <button onclick="editRow(this)">Szerkesztés</button>
+                    <button onclick="deleteRow(this)">Törlés</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Termék 2</td>
+                <td>Ruházat</td>
+                <td>
+                    <button onclick="editRow(this)">Szerkesztés</button>
+                    <button onclick="deleteRow(this)">Törlés</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="addRow()">Új sor hozzáadása</button>
+
+    <script src="script2.js"></script>
+    <footer>
+        <p>Elkészítők:</p>
+        <p>Baczúr Martin - Neptun: YLZZ7U, Kullai Marcell - Neptun: FSA7X7</p>
+    </footer>
+</body>
+</html>
