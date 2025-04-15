@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <ul>
+    <ul id="mainnavbar">
         <li><a href="index.html">Kezdőlap</a></li>
         <li><a href="table.html">Táblázat</a></li>
         <li><a href="html5.html">HTML5</a></li>
@@ -16,8 +16,11 @@
         <li><a href="oojs.html">OOJS</a></li>
         <li><a href="react.html">React</a></li>
     </ul>
-    <h2>5x5-ös Táblázat és Vonaldiagram</h2>
-    <table id="data-table">
+    
+    <div id="tablazatwdia">
+
+        <h2>5x5-ös Táblázat és Vonaldiagram</h2>
+    <table id="data-table" class="kozep">
         <thead>
             <tr>
                 <th>Év</th>
@@ -31,43 +34,43 @@
         <tbody>
             <tr>
                 <td>2021</td>
-                <td>15</td>
+                <td>5</td>
+                <td>10</td>
+                <td>90</td>
                 <td>30</td>
-                <td>50</td>
-                <td>70</td>
-                <td>60</td>
+                <td>90</td>
             </tr>
             <tr>
                 <td>2022</td>
                 <td>10</td>
-                <td>25</td>
-                <td>45</td>
-                <td>65</td>
-                <td>55</td>
+                <td>70</td>
+                <td>20</td>
+                <td>30</td>
+                <td>90</td>
             </tr>
             <tr>
                 <td>2023</td>
-                <td>20</td>
+                <td>25</td>
                 <td>35</td>
-                <td>55</td>
+                <td>10</td>
                 <td>75</td>
-                <td>65</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>2024</td>
                 <td>25</td>
-                <td>40</td>
+                <td>90</td>
                 <td>60</td>
-                <td>80</td>
+                <td>20</td>
                 <td>70</td>
             </tr>
             <tr>
                 <td>2025</td>
                 <td>30</td>
-                <td>45</td>
-                <td>65</td>
+                <td>70</td>
+                <td>20</td>
                 <td>85</td>
-                <td>75</td>
+                <td>5</td>
             </tr>
         </tbody>
     </table>
@@ -81,12 +84,15 @@
         <option value="4">2025</option>
     </select>
 
-    <canvas id="myChart" width="200" height="100"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <canvas id="myChart" width="100" height="50" class="wrap"></canvas>
+
+    </div>
+
     <footer>
         <p>Elkészítők:</p>
         <p>Baczúr Martin - Neptun: YLZZ7U, Kullai Marcell - Neptun: FSA7X7</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
