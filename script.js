@@ -1,10 +1,10 @@
 // Táblázat adatainak meghatározása
 const tableData = [
-    [15, 30, 50, 70, 60],
-    [10, 25, 45, 65, 55],
-    [20, 35, 55, 75, 65],
-    [25, 40, 60, 80, 70],
-    [30, 45, 65, 85, 75]
+    [5, 10, 90, 30, 90],
+    [10, 70, 20, 30, 90],
+    [25, 35, 10, 75, 5],
+    [25, 90, 60, 20, 70],
+    [30, 70, 20, 85, 5]
 ];
 
 // Diagram beállítása
@@ -17,9 +17,31 @@ const chart = new Chart(ctx, {
             label: 'Adatok',
             data: tableData[0], // Kezdő adat a 2021-es év első sor
             fill: false,
-            borderColor: 'green',
+            borderColor: 'black',
             tension: 0.1
         }]
+    },
+    options: {
+        scales: {
+            x: {
+                grid: {
+                    color: 'black',
+                    borderColor: 'black' // tengelyvonal színe
+                },
+                ticks: {
+                    color: 'white'
+                }
+            },
+            y: {
+                grid: {
+                    color: 'black',
+                    borderColor: 'black' // tengelyvonal színe
+                },
+                ticks: {
+                    color: 'white'
+                }
+            }
+        }
     }
 });
 

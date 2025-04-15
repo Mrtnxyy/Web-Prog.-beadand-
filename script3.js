@@ -1,5 +1,3 @@
-// Alap objektumorientált JavaScript kód
-
 // Alap osztály a menühöz
 class Menu {
     constructor(name, items) {
@@ -15,16 +13,12 @@ class Menu {
         menuTitle.textContent = this.name;
         menuDiv.appendChild(menuTitle);
 
-        const menuList = document.createElement('ul');
-        menuList.classList.add('menu-list');
-
+        // Menüelemek kirajzolása sortöréssel
         this.items.forEach(item => {
-            const menuItem = document.createElement('li');
-            menuItem.innerHTML = `<span>${item.name}</span> - ${item.price} Ft`;
-            menuList.appendChild(menuItem);
+            const itemDiv = document.createElement('div');
+            itemDiv.innerHTML = `<span>${item.name}</span> - ${item.price} Ft<br />`;
+            menuDiv.appendChild(itemDiv);
         });
-
-        menuDiv.appendChild(menuList);
 
         const btn = document.createElement('button');
         btn.classList.add('btn');
@@ -39,10 +33,9 @@ class Menu {
 class SpecialMenu extends Menu {
     constructor(name, items, discount) {
         super(name, items);  // A szülő konstruktorának meghívása
-        this.discount = discount; // Kedvezmény
+        this.discount = discount;
     }
 
-    // Render metódus felülbírálása, hogy a kedvezményt is megjelenítse
     render() {
         const menuDiv = super.render();  // Szülő osztály render metódusa
 
@@ -56,38 +49,38 @@ class SpecialMenu extends Menu {
     }
 }
 
-// Példányosítsunk néhány menüt
+// Menüelemek
 const breakfastItems = [
-    { name: 'Tojásos szendvics', price: 800},
-    { name: 'Pankóta', price: 1200 },
-    { name: 'Kávé', price: 400 }
+    { id: "sli", name: 'Tojásos szendvics', price: 800 },
+    { id: "sli", name: 'Pankóta', price: 1200 },
+    { id: "sli", name: 'Kávé', price: 400 }
 ];
 
 const lunchItems = [
-    { name: 'Leves', price: 600 },
-    { name: 'Grillezett csirke', price: 1500 },
-    { name: 'Köret (rizs)', price: 300 }
+    { id: "sli", name: 'Leves', price: 600 },
+    { id: "sli", name: 'Grillezett csirke', price: 1500 },
+    { id: "sli", name: 'Köret (rizs)', price: 300 }
 ];
 
 const dessertItems = [
-    { name: 'Sütemény', price: 600 },
-    { name: 'Gyümölcs saláta', price: 500 },
-    { name: 'Csokoládé mousse', price: 800 }
+    { id: "sli", name: 'Sütemény', price: 600 },
+    { id: "sli", name: 'Gyümölcs saláta', price: 500 },
+    { id: "sli", name: 'Csokoládé mousse', price: 800 }
 ];
 
 const specialItems = [
-    { name: 'Szezonális saláta', price: 700 },
-    { name: 'Grillezett lazac', price: 2000 }
+    { id: "sli", name: 'Szezonális saláta', price: 700 },
+    { id: "sli", name: 'Grillezett lazac', price: 2000 },
+    { id: "sli", name: 'Bélszín Steak', price: 5000 }
 ];
 
+// Menü példányosítás
 const breakfastMenu = new Menu("Reggeli", breakfastItems);
 const lunchMenu = new Menu("Ebéd", lunchItems);
 const dessertMenu = new Menu("Desszert", dessertItems);
-
-// Speciális menü (kedvezménnyel)
 const specialMenu = new SpecialMenu("Különleges étkezés", specialItems, 10);
 
-// A menük hozzáadása az oldalhoz
+// Menü kirenderelés
 const menusContainer = document.getElementById('menus-container');
 menusContainer.appendChild(breakfastMenu.render());
 menusContainer.appendChild(lunchMenu.render());
