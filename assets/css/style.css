@@ -245,6 +245,12 @@ table, th, td {
   object-fit: cover;
   border: 1px solid #000000;
 }
+/* Footer covereli a deletet :D */
+#body-ajax {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
 /*
 .calculator {
   background-color: #fff;
