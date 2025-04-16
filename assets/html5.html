@@ -12,7 +12,7 @@
         <li><a href="../assets/table.html">Táblázat</a></li>
         <li><a href="../assets/html5.html" class="active">HTML5</a></li>
         <li><a href="../assets/chartjs.html">ChartJS</a></li>
-        <li><a href="#about">AJAX</a></li>
+        <li><a href="../assets/ajax.html">AJAX</a></li>
         <li><a href="../assets/oojs.html">OOJS</a></li>
         <li><a href="../assets/react.html">React</a></li>
     </ul>
@@ -25,6 +25,22 @@
             Húzd ide a szöveget!
         </div>
     </div>
+
+    <p>Kattints a gombra a helymeghatárazozáshoz.</p>
+	<button onclick="getLocation()">Helyzet lekérdezése</button>
+    <p id="demo"></p>
+	<script>	
+		var x = document.getElementById("demo");
+		function getLocation()  {
+			if (navigator.geolocation)
+				navigator.geolocation.getCurrentPosition(showPosition);
+			else 
+				x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+		function showPosition(position)  {
+			x.innerHTML = "Szélesség: " + position.coords.latitude + "<br>Hosszúság: " + position.coords.longitude;	
+		}
+	</script>
 
     <script src="../assets/js/HTML5.js"></script>
     <footer>
